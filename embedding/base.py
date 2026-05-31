@@ -18,7 +18,8 @@ class BaseEmbedding(torch.nn.Module):
             trust_remote_code=True,
             torch_dtype=torch.bfloat16,
             low_cpu_mem_usage=True,
-            attn_implementation="flash_attention_2",
+            # attn_implementation="flash_attention_2",
+            attn_implementation="sdpa",
             device_map="auto",
         )
         self.model.gradient_checkpointing_enable()

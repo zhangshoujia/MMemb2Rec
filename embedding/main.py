@@ -52,8 +52,14 @@ def main():
         set_seed(training_args.seed)
 
     # Load dataset
+    # raw_dataset = load_dataset(
+    #     "cfli/bge-full-data",
+    # )
     raw_dataset = load_dataset(
-        "cfli/bge-full-data",
+        "parquet",
+        data_files={
+            "train": "data/bge-full-data/data/amazon_reviews_classification-00000-of-00001.parquet",
+        },
     )
     sampled_dataset = [
         split.shuffle(seed=training_args.seed).select(
