@@ -213,3 +213,14 @@ __marimo__/
 /data/
 /models/
 /results/
+
+# Amazon review raw/generated artifacts
+/recdata/raw/**/*.jsonl
+/recdata/raw/**/*.jsonl.gz*
+/recdata/raw/**/*_5core_*.csv
+/recdata/raw/**/*_image_download_*.csv
+/recdata/raw/**/*_image_download_*.log
+/recdata/raw/**/image/
+/recdata/raw/*.csv
+/recdata/raw/Baby/*.csv
+!/recdata/raw/processing.ipynb
